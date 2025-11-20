@@ -39,9 +39,11 @@ requirements:
     - torchvision >=0.22.1
     - tensorboard >=2.19.0
     - torchmetrics >=1.7.3
-    # - torchsummary >=1.5.1
     - optuna >=4.5.0
     - scikit-image >=0.25.2
+    - pip
+    - pip:
+        - torchsummary>=1.5.1
 
 tests:
   - python:
