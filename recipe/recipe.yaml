@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: quantem
-  version: "0.1.5.post2"
+  version: "0.1.7"
   python_min: "3.11"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/quantem-${{ version }}.tar.gz
-  sha256: 710437410dbfa3d988ef11f540a503291c4731a0fc7408db99b5e0d4a2ddfd53
+  sha256: 8c8840cd267fd047687f31f46a383bee3d1999c73bddb561702ce2a80f3d69b4
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
