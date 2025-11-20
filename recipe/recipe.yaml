@@ -35,6 +35,13 @@ requirements:
     - cmasher >=1.9.2
     - rosettasciio-base >=0.8.0
     - h5py >=3.13.0
+    - pytorch >=2.7.0
+    - torchvision >=0.22.1
+    - tensorboard >=2.19.0
+    - torchmetrics >=1.7.3
+    # - torchsummary >=1.5.1
+    - optuna >=4.5.0
+    - scikit-image >=0.25.2
 
 tests:
   - python:
