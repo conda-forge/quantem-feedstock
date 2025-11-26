@@ -1,7 +1,7 @@
-From cfa0f50c4fe74a46cbb908d3d07078a9d5ff18a9 Mon Sep 17 00:00:00 2001
+From 53d651846c8d58ae4fdf601146005b789529c772 Mon Sep 17 00:00:00 2001
 From: gvarnavi <gvarnavides@berkeley.edu>
-Date: Wed, 26 Nov 2025 19:07:04 +0100
-Subject: [PATCH] removing torchsummary from deps
+Date: Wed, 26 Nov 2025 21:48:35 +0100
+Subject: [PATCH] removing torchsummary
 
 ---
  pyproject.toml |  1 -
