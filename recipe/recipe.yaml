@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: quantem
-  version: "0.1.5.post2"
+  version: "0.1.6"
   python_min: "3.11"
 
 package:
@@ -11,10 +11,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/quantem-${{ version }}.tar.gz
-  sha256: 710437410dbfa3d988ef11f540a503291c4731a0fc7408db99b5e0d4a2ddfd53
+  sha256: ca7efc66dc7a3a4eecad86e760b7d73409102742a7a88aee67ca0270090d72b8
+  patches:
+    - removing-torchsummary-from-deps.0.1.6.patch
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -35,6 +37,12 @@ requirements:
     - cmasher >=1.9.2
     - rosettasciio-base >=0.8.0
     - h5py >=3.13.0
+    - pytorch >=2.7.0
+    - torchvision >=0.22.1
+    - tensorboard >=2.19.0
+    - torchmetrics >=1.7.3
+    - optuna >=4.5.0
+    - scikit-image >=0.25.2
 
 tests:
   - python:
