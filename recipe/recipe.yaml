@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: quantem
-  version: "0.1.6"
+  version: "0.1.7"
   python_min: "3.11"
 
 package:
@@ -11,9 +11,9 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/quantem-${{ version }}.tar.gz
-  sha256: ca7efc66dc7a3a4eecad86e760b7d73409102742a7a88aee67ca0270090d72b8
+  sha256: 8c8840cd267fd047687f31f46a383bee3d1999c73bddb561702ce2a80f3d69b4
   patches:
-    - removing-torchsummary-from-deps.0.1.6.patch
+    - removing-torchsummary-from-deps.0.1.7.patch
 
 build:
   number: 0
@@ -43,6 +43,7 @@ requirements:
     - torchmetrics >=1.7.3
     - optuna >=4.5.0
     - scikit-image >=0.25.2
+    - hdf5plugin
 
 tests:
   - python:
