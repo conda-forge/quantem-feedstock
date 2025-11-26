@@ -12,6 +12,8 @@ package:
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/quantem-${{ version }}.tar.gz
   sha256: ca7efc66dc7a3a4eecad86e760b7d73409102742a7a88aee67ca0270090d72b8
+  patches:
+    - removing-torchsummary-from-deps.0.1.6.patch
 
 build:
   number: 0
@@ -39,7 +41,6 @@ requirements:
     - torchvision >=0.22.1
     - tensorboard >=2.19.0
     - torchmetrics >=1.7.3
-    # - torchsummary >=1.5.1
     - optuna >=4.5.0
     - scikit-image >=0.25.2
 
