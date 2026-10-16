@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: quantem
-  version: "0.1.9"
+  version: "0.1.10"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/quantem-${{ version }}.tar.gz
-  sha256: ec6353024370e6543f109798a3a590c148d1d7645dcf66b543cfbab2da2acfe0
+  sha256: 168b4e4c2ea1acde36613befc7b8d136b730b9709d9e5bb47ee7dcb052e80e29
 
 build:
   number: 0
@@ -43,6 +43,9 @@ requirements:
     - scikit-image >=0.25.2
     - hdf5plugin >=6.0.0
     - torchinfo >=1.8.0
+    - ase >=3.23
+    - em-database >=0.5
+    - spglib >=2.5
 
 tests:
   - python:
