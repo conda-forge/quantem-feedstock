@@ -3,15 +3,15 @@ About quantem-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/quantem-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/ophusgroup/quantem
+Home: https://github.com/electronmicroscopy/quantem
 
 Package license: MIT
 
 Summary: quantitative electron microscopy analysis toolkit
 
-Development: https://github.com/ophusgroup/quantem
+Development: https://github.com/electronmicroscopy/quantem
 
-Documentation: https://github.com/ophusgroup/quantem
+Documentation: https://github.com/electronmicroscopy/quantem
 
 Current build status
 ====================

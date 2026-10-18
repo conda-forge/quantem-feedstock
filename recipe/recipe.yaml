@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: quantem
   version: "0.1.10"
-  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -12,6 +11,8 @@ package:
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/quantem-${{ version }}.tar.gz
   sha256: 168b4e4c2ea1acde36613befc7b8d136b730b9709d9e5bb47ee7dcb052e80e29
+  patches:
+    - removing-em-database-from-deps.0.1.10.patch
 
 build:
   number: 0
@@ -44,7 +45,6 @@ requirements:
     - hdf5plugin >=6.0.0
     - torchinfo >=1.8.0
     - ase >=3.23
-    - em-database >=0.5
     - spglib >=2.5
 
 tests:
@@ -52,15 +52,17 @@ tests:
       imports:
         - quantem
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: MIT
   license_file: LICENSE
   summary: quantitative electron microscopy analysis toolkit
-  homepage: https://github.com/ophusgroup/quantem
-  repository: https://github.com/ophusgroup/quantem
-  documentation: https://github.com/ophusgroup/quantem
+  homepage: https://github.com/electronmicroscopy/quantem
+  repository: https://github.com/electronmicroscopy/quantem
+  documentation: https://github.com/electronmicroscopy/quantem
 
 extra:
   recipe-maintainers:
